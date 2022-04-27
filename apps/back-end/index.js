@@ -2,18 +2,17 @@ const express = require('express')
 const app = express();
 const port = 3000;
 
-const { listPlaces, listObjects, listScenes } = require('./files');
+const list = require('./files');
 
-app.use(express.static(`${__dirname}/assets`));
+app.use('/assets',express.static(`${__dirname}/assets`));
 
 app.get('/:place/:scene?/objects', (req, res) => {
-
-    if(!req.params.places) {
+    if(!req.params.place) {
         res.send("Parametros não preenchidos corretamentes");
         return;
     }
 
-    (listObjects(req.params.place, req.params.scene).then( (a) => {
+    (list.objects(req.params.place, req.params.scene).then( (a) => {
         res.json({ 
             objects: a
         });
@@ -21,22 +20,30 @@ app.get('/:place/:scene?/objects', (req, res) => {
 });
 
 app.get('/places', (req, res) => {
-    (listPlaces().then( (a) => {
+    (list.places().then( (a) => {
         res.json({ 
             places: a
         });
     }));
 });
 
-app.get('/:places/scenes', (req, res) => {
-    if(!req.params.places) {
+app.get('/:place/scenes', (req, res) => {
+    if(!req.params.place) {
         res.send("Parametros não preenchidos corretamentes");
         return;
     }
 
-    (listScenes(req.params.places).then( (a) => {
+    (list.scenes(req.params.place).then( (a) => {
         res.json({ 
             scenes: a
+        });
+    }));
+});
+
+app.get('/:file?/path', (req, res) => {
+    (list.path(req.params.file).then( (a) => {
+        res.json({ 
+            files: a
         });
     }));
 });

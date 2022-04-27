@@ -19,7 +19,7 @@ async function listarArquivosDoDiretorio(diretorio, arquivos) {
 }
 
 
-async function listPlaces() {
+async function places() {
     let places = await listarArquivosDoDiretorio(`${__dirname}/assets/places`); // coloque o caminho do seu diretorio
     let aux = [];
     let index = 0;
@@ -41,7 +41,7 @@ async function listPlaces() {
     return aux;
 }
 
-async function listObjects(place, scene = '') {
+async function objects(place, scene = '') {
     let objects = await listarArquivosDoDiretorio(`${__dirname}/assets/objects/${place}/${scene}`);
     let aux = [];
     let index = 0;
@@ -56,7 +56,7 @@ async function listObjects(place, scene = '') {
     return aux;
 }
 
-async function listScenes(place) {
+async function scenes(place) {
     let scenes = await listarArquivosDoDiretorio(`${__dirname}/assets/places/${place}`); // coloque o caminho do seu diretorio
     let aux = [];
     let index = 0;
@@ -72,9 +72,30 @@ async function listScenes(place) {
     return aux;
 }
 
+async function path(fileName = '') {
+    let files = await listarArquivosDoDiretorio(`${__dirname}/assets`); // coloque o caminho do seu diretorio
+    let aux = [];
+    let index = 0;
+
+    files.forEach((file) => { 
+        let noDirname = file.replace(`${__dirname}`, '');
+
+
+        if(noDirname.indexOf(fileName) > -1 || fileName === ''){
+            aux[index] = noDirname.replace('.jpg', '');
+            index++;
+        }
+
+    });
+
+    return aux;
+}
+
+
 
 module.exports = {
-    listPlaces,
-    listObjects,
-    listScenes,
+    places,
+    objects,
+    scenes,
+    path,
 }
