@@ -14,7 +14,7 @@ section {
     width: 1500px;
     height: 1112px;
     padding: 30px 30px 0 30px;
-    background-image: url("../back-end/assets/places/main/Frame\ 1.jpg");
+    background-image: url('https://my-dream-house-fatec.herokuapp.com/assets/places/main/door.jpg');
     background-repeat: no-repeat;
     background-size: contain;
 }
