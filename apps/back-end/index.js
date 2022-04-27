@@ -1,10 +1,13 @@
 const express = require('express')
 const app = express();
 const port = process.env.PORT || 3000;
+var cors = require('cors')
+
 
 const list = require('./files');
 
 app.use('/assets',express.static(`${__dirname}/assets`));
+app.use(cors())
 
 app.get('/:place/:scene?/objects', (req, res) => {
     if(!req.params.place) {
