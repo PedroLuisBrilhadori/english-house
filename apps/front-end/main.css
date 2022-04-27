@@ -4,30 +4,50 @@
 
 body {
     margin: 0;
-    /* height: 100vh; */
+    background-color: cyan;
+    display: grid;
+    place-content: center;
+      /* height: 100vh; */
 }
 
 section {
-    width: 100%;
-    /* height: 100px; */
+    display: block;
+    width: 1500px;
+    height: 1112px;
+    background-image: url("../back-end/assets/places/main/Frame\ 1.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 #divPresentation {
+    display: grid;
     background-color: #182625;
-    margin: 20px 190px;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
+    width: 997px;
+    height: 203px;
+    margin: 0px 190px;
+    border-radius: 50px;
+    place-items: center;
 }
 
 #divPresentation h1 {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 32px;
+    font-size: 64px;
+    font-weight: bold;
 }
 
-#divImage {
+/* #divImage {
+    width: 1500px;
+    height: 1121px;
+    background: url(../back-end/assets/places/bedroom/bedroom-bed.jpg);
+} */
 
+.alignDivs {
+    /* margin-top: 480px; */
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 #divSearch {
@@ -35,7 +55,6 @@ section {
     border-radius: 50%;
     bottom: 0px;
     margin-left: 20px;
-    margin-top: 480px;
     height: 100px;
     width: 100px;
     text-align: -webkit-center;
@@ -51,9 +70,7 @@ section {
 #divMap {
     background-color: #182625;
     border-radius: 50%;
-    bottom: 0px;
     margin-right: 20px;
-    margin-top: 480px;
     height: 100px;
     width: 100px;
     text-align: -webkit-center;
@@ -66,7 +83,3 @@ section {
     margin-top: 20px;
 }
 
-.alignDivs {
-    display: flex;
-    justify-content: space-between;
-}
