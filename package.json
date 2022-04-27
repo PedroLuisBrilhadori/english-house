@@ -2,7 +2,7 @@
   "name": "my-webpack-project",
   "version": "1.0.0",
   "description": "My webpack project",
-  "main": "index.js",
+  "main": "apps/back-end/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=production --node-env=production",
@@ -15,5 +15,8 @@
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.0.24"
+  },
+  "dependencies": {
+    "express": "^4.18.0"
   }
 }
