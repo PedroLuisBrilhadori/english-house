@@ -6,9 +6,6 @@
   "scripts": {
     "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode=production --node-env=production",
-    "build:dev": "webpack --mode=development",
-    "build:prod": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch"
   },
   "keywords": [],
