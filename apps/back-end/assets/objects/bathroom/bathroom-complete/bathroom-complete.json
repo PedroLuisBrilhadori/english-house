@@ -1,32 +1,40 @@
 {
-    "basement": {
+    "bathroom-complete": {
         "objects": [
             {
-                "name": "couch", "text": "There is a couch."
+                "name": "mirror", "text": "There is a mirror."
             },
 
             {
-                "name": "trampoline", "text": "There are chairs."
+                "name": "soaps", "text": "There are soaps."
             },
 
             {
-                "name": "microwave", "text": "There are sun chairs."
+                "name": "dresser", "text": "There is a drawer."
             },
 
             {
-                "name": "cushion", "text": "There are armchairs."
+                "name": "toothbrush-toothpaste-floss", "text": "There is a toothbrush, toothpaste and floss."
             },
 
             {
-                "name": "table-tennis", "text": "There is a game table."
-            },
-            
-            {
-                "name": "cushions", "text": "There are cushions."
+                "name": "bathroom-sink", "text": "There is a bathroom sink."
             },
 
             {
-                "name": "pool-table", "text": "There is a pool table."
+                "name": "towels", "text": "There are towels."
+            },
+
+            {
+                "name": "plants", "text": "There are plants."
+            },
+
+            {
+                "name": "bathtub", "text": "There is a bathtub."
+            },
+
+            {
+                "name": "shower", "text": "There is a shower."
             }
         ]
     }
