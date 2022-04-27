@@ -1,0 +1,29 @@
+{
+    "backyard": {
+        "objects": [
+            {
+                "name": "beach-umbrella", "text": "There is a beach umbrella."
+            },
+
+            {
+                "name": "trampoline", "text": "There is a trampoline."
+            },
+
+            {
+                "name": "poolside-lounger", "text": "There are poolside lounger."
+            },
+
+            {
+                "name": "armchairs", "text": "There are armchairs."
+            },
+
+            {
+                "name": "outdoor-table", "text": "There is a outdoor table."
+            },
+
+            {
+                "name": "window", "text": "There is an window."
+            }
+        ]
+    }
+}

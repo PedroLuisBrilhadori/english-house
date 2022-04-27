@@ -1,0 +1,39 @@
+{
+    "living-room": {
+        "objects": [
+            {
+                "name": "painting", "text": "There is a painting."
+            },
+
+            {
+                "name": "couch", 
+                "text": "There is a couch."
+            },
+
+            {
+                "name": "plant", 
+                "text": "There is a plant."
+            },
+
+            {
+                "name": "air-conditioner", 
+                "text": "There is a air conditioner."
+            },
+
+            {
+                "name": "living-room-chair", 
+                "text": "There is a living room chair."
+            },
+
+            {
+                "name": "tv-stand", 
+                "text": "There is a TV stand."
+            },
+
+            {
+                "name": "television", 
+                "text": "There is a television."
+            }
+        ]
+    }
+}

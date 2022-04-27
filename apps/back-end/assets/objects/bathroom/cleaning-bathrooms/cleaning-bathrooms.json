@@ -1,0 +1,21 @@
+{
+    "cleaning-bathrooms": {
+        "objects": [
+            {
+                "name": "bathroom-faucet", "text": "There is a bathroom faucet."
+            },
+
+            {
+                "name": "toilet", "text": "There is a toilet."
+            },
+
+            {
+                "name": "toilet-paper", "text": "There is a toilet paper."
+            },
+
+            {
+                "name": "shower", "text": "There is a shower."
+            }
+        ]
+    }
+}

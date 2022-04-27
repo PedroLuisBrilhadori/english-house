@@ -1,0 +1,37 @@
+{
+    "garden": {
+        "objects": [
+            {
+                "name": "flowers", "text": "There are flowers."
+            },
+
+            {
+                "name": "trees", "text": "There are trees."
+            },
+
+            {
+                "name": "plants", "text": "There are plants."
+            },
+
+            {
+                "name": "door", "text": "There is a door."
+            },
+
+            {
+                "name": "chairs", "text": "There are chairs."
+            },
+
+            {
+                "name": "black-cat", "text": "There is a black cat."
+            },
+
+            {
+                "name": "window", "text": "There is a window."
+            },
+
+            {
+                "name": "yellow-table", "text": "There is a yellow table."
+            }
+        ]
+    }
+}

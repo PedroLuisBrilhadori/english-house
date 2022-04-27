@@ -1,0 +1,41 @@
+{
+    "bathroom-complete": {
+        "objects": [
+            {
+                "name": "mirror", "text": "There is a mirror."
+            },
+
+            {
+                "name": "soaps", "text": "There are soaps."
+            },
+
+            {
+                "name": "dresser", "text": "There is a drawer."
+            },
+
+            {
+                "name": "toothbrush-toothpaste-floss", "text": "There is a toothbrush, toothpaste and floss."
+            },
+
+            {
+                "name": "bathroom-sink", "text": "There is a bathroom sink."
+            },
+
+            {
+                "name": "towels", "text": "There are towels."
+            },
+
+            {
+                "name": "plants", "text": "There are plants."
+            },
+
+            {
+                "name": "bathtub", "text": "There is a bathtub."
+            },
+
+            {
+                "name": "shower", "text": "There is a shower."
+            }
+        ]
+    }
+}

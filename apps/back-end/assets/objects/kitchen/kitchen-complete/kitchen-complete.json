@@ -1,0 +1,41 @@
+{
+    "kitchen-complete": {
+        "objects": [
+            {
+                "name": "microwave", "text": "There is a microwave."
+            },
+
+            {
+                "name": "tea-kettle", "text": "There is a tea kettle."
+            },
+
+            {
+                "name": "cooker", "text": "There is a cooker."
+            },
+
+            {
+                "name": "cutlery", "text": "There is a cutlery."
+            },
+
+            {
+                "name": "mixer", "text": "There is a mixer."
+            },
+
+            {
+                "name": "kitchen-cabinet", "text": "There is a kitchen cabinet."
+            },
+
+            {
+                "name": "fridge", "text": "There is a fridge."
+            },
+
+            {
+                "name": "dishwasher", "text": "There is a dishwasher."
+            },
+
+            {
+                "name": "cups", "text": "There are cups."
+            }
+        ]
+    }
+}
