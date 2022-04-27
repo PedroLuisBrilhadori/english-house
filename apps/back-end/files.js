@@ -77,6 +77,8 @@ async function path(fileName = '') {
     let aux = [];
     let index = 0;
 
+    fileName = fileName.replace(/\$/g, '/');
+
     files.forEach((file) => { 
         let noDirname = file.replace(`${__dirname}`, '');
 
@@ -87,7 +89,6 @@ async function path(fileName = '') {
         }
 
     });
-
     return aux;
 }
 
