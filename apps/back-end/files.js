@@ -49,8 +49,10 @@ async function objects(place, scene = '') {
     objects.forEach((object) => { 
         let noDirname = object.replace(`${__dirname}/assets/objects/${place}/${scene}/`, '');
 
-        aux[index] = noDirname;
-        index++;
+        if(noDirname.indexOf('.json') === -1){
+            aux[index] = noDirname;
+            index++;
+        }
     });
 
     return aux;
