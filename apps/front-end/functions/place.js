@@ -1,11 +1,10 @@
 let place = {
-    name: "main",
-    scene: "door",
+    name: "bathroom",
+    scene: "bathroom-complete",
     objecs: [
 
     ],
 }
-
 function setPlace(name){
     place.name = name;
 }

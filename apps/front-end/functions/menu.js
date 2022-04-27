@@ -1,11 +1,7 @@
 const get = require('./http');
 
 function showPlaces(){
-    get.places().then(res => {
-        res.json().then(data => {
-            console.log(data);
-        })
-    })
+   get.places().then(places => console.log(places));
 }
 
 
