@@ -82,7 +82,7 @@ async function path(fileName = '') {
 
 
         if(noDirname.indexOf(fileName) > -1 || fileName === ''){
-            aux[index] = noDirname.replace('.jpg', '');
+            aux[index] = noDirname;
             index++;
         }
 
