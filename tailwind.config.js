@@ -1,7 +1,15 @@
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./apps/front-end/**/*.{html,js}"],
   theme: {
     extend: {},
   },
-  plugins: [],
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        include: path.resolve(__dirname, '/apps/front-end'),
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
+      },
+    ],
+  },
 }
