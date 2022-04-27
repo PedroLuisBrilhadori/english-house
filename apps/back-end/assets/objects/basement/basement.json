@@ -1,0 +1,33 @@
+{
+    "basement": {
+        "objects": [
+            {
+                "name": "couch", "text": "There is a couch."
+            },
+
+            {
+                "name": "trampoline", "text": "There are chairs."
+            },
+
+            {
+                "name": "microwave", "text": "There are sun chairs."
+            },
+
+            {
+                "name": "cushion", "text": "There are armchairs."
+            },
+
+            {
+                "name": "table-tennis", "text": "There is a game table."
+            },
+            
+            {
+                "name": "cushions", "text": "There are cushions."
+            },
+
+            {
+                "name": "pool-table", "text": "There is a pool table."
+            }
+        ]
+    }
+}

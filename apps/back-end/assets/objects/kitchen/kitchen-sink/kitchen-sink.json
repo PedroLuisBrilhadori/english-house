@@ -1,0 +1,13 @@
+{
+    "kitchen-sink": {
+        "objects": [
+            {
+                "name": "kitchen-sink", "text": "There is a kitchen sink."
+            },
+
+            {
+                "name": "kitchen-faucet", "text": "There is a kitchen faucet."
+            }
+        ]
+    }
+}
