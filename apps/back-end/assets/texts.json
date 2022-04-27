@@ -18,7 +18,7 @@
             },
 
             {
-                "name": "game-table", "text": "There is a game table."
+                "name": "outdoor-table", "text": "There is a outdoor table."
             },
 
             {
@@ -67,19 +67,19 @@
                 },
 
                 {
-                    "name": "dish-soaps", "text": "There are dish soaps."
+                    "name": "soaps", "text": "There are soaps."
                 },
 
                 {
-                    "name": "drawer", "text": "There is a drawer."
+                    "name": "dresser", "text": "There is a drawer."
                 },
 
                 {
-                    "name": "toothbrush", "text": "There is a toothbrush."
+                    "name": "toothbrush-toothpaste-floss", "text": "There is a toothbrush, toothpaste and floss."
                 },
 
                 {
-                    "name": "faucet-bathroom", "text": "There is a faucet bathroom."
+                    "name": "bathroom-faucet", "text": "There is a bathroom faucet."
                 },
 
                 {
@@ -102,7 +102,7 @@
         "cleaning-bathrooms": {
             "objects": [
                 {
-                    "name": "faucet-bathroom", "text": "There is a faucet bathroom."
+                    "name": "bathroom-faucet", "text": "There is a bathroom faucet."
                 },
 
                 {
@@ -274,7 +274,7 @@
                 },
 
                 {
-                    "name": "tea", "text": "There is a tea."
+                    "name": "tea-kettle", "text": "There is a tea kettle."
                 },
 
                 {
@@ -290,7 +290,7 @@
                 },
 
                 {
-                    "name": "kitchen-caribinet", "text": "There is a kitchen caribinet."
+                    "name": "kitchen-cabinet", "text": "There is a kitchen cabinet."
                 },
 
                 {
@@ -352,7 +352,7 @@
                 },
 
                 {
-                    "name": "clothes&hanger", "text": "There are clothes and hanger."
+                    "name": "clothes&hangers", "text": "There are clothes and hangers."
                 },
 
                 {
@@ -376,7 +376,7 @@
                 },
 
                 {
-                    "name": "clothes-line", "text": "There are clothes line."
+                    "name": "clothesline", "text": "There is a clothesline."
                 }
             ]
         }
