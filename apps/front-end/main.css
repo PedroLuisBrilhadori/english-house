@@ -36,12 +36,6 @@ section {
     font-weight: bold;
 }
 
-.alignDivs {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 #divSearch {
     background-color: #182625;
     border-radius: 50%;
