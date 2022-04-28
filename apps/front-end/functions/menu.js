@@ -10,12 +10,13 @@ document.getElementById('arrowNext').addEventListener('click', () => {
     menuContext.page = 2;
     document.getElementById('0').classList = "";
     document.getElementById('1').classList = "selected"
+
     removeImages();
     showPlaces();
 });
 
 document.getElementById('arrowBack').addEventListener('click', () => {
-    menuContext.page = 0;
+    menuContext.page = 1;
     document.getElementById('0').classList = "selected";
     document.getElementById('1').classList = "";
 
@@ -26,23 +27,23 @@ document.getElementById('arrowBack').addEventListener('click', () => {
 
 const menuContext = {
     scenes: [],
-    scenes2: [],
-    page: 0,
+    page: 1,
+    pageSize: 8,
     menu: true,
 }
 
 function showMenu() {
-    const i = main.childElementCount
+    const i = main.childElementCount;
     
     if(menuContext.menu){
         while(main.childElementCount === i)
             main.removeChild(menu);
-        menuContext.menu = !menuContext.menu;
     } else{
-        menuContext.menu = !menuContext.menu;
         main.appendChild(menu);
         showPlaces();
     } 
+    
+    menuContext.menu = !menuContext.menu;
 }
 
 async function getScenes(){ 
@@ -56,19 +57,14 @@ async function getScenes(){
 
 async function constructPlace(){
     return await getScenes().then( data => {
-        let i = 1;
         data.forEach(scene => {
             const current = {
                 name: getSceneName(scene),
                 path: scene,
                 place: getPlaceName(scene),
             }
-
-            if(i <= 8)
-                menuContext.scenes.push(current);
-            else 
-                menuContext.scenes2.push(current);
-            i++;
+    
+            menuContext.scenes.push(current);
         });
     })
 }
@@ -76,15 +72,15 @@ async function constructPlace(){
 function showPlaces(){    
     if(menuContext.menu)
     constructPlace().then(a => {
-        if(menuContext.page === 0){
-            menuContext.scenes.forEach(s => {
-                grid.appendChild(createScene(s));
-            })        
-        } else {
-            menuContext.scenes2.forEach(s => {
-                grid.appendChild(createScene(s));
-            })  
-        }
+        const trimStart = (menuContext.page - 1) * 8;
+        const trimEnd = trimStart + 8;
+        const items = menuContext.scenes.splice(trimStart, trimEnd);
+
+
+        items.forEach(item => {
+            grid.appendChild(createScene(item));
+        })
+
     })
 }
 
@@ -118,11 +114,7 @@ module.exports = {
 }
 
 function removeImages() {
-    while(grid.childNodes.length){
-        grid.childNodes.forEach(child => {
-            grid.removeChild(child);
-        })
-    }
+    grid.textContent = '';    
 }
 
 
