@@ -62,10 +62,35 @@ async function scenes(place) {
     let scenes = await listarArquivosDoDiretorio(`${__dirname}/assets/places/${place}`); // coloque o caminho do seu diretorio
     let aux = [];
     let index = 0;
+    
 
     scenes.forEach((scene) => { 
         let noDirname = scene.replace(`${__dirname}/assets/places/${place}/`, '');
 
+        aux[index] = noDirname.replace('.jpg', '');
+        index++;
+
+    });
+
+    return aux;
+}
+
+async function allscenes(){
+    let scenes = await listarArquivosDoDiretorio(`${__dirname}/assets/places/`);
+    let aux = [];
+    let index = 0;
+    
+
+    scenes.forEach((scene) => { 
+        let noDirname = String(scene).replace(`${__dirname}/assets/places//`, '');
+        let stringAux = '';
+
+        for(let i = noDirname.indexOf('/') + 1; i < noDirname.length; i++){
+            stringAux += noDirname[i];
+        }
+
+        noDirname = stringAux;
+        
         aux[index] = noDirname.replace('.jpg', '');
         index++;
 
@@ -101,4 +126,5 @@ module.exports = {
     objects,
     scenes,
     path,
+    allscenes
 }

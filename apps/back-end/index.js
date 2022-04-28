@@ -49,6 +49,16 @@ app.get('/:place/scenes', (req, res) => {
     });
 });
 
+app.get('/scenes', (req, res) => {
+    (list.allscenes().then( (a) => {
+        res.json({ 
+            places: a
+        });
+    })).catch(err => {
+        res.send(err)
+    })
+});
+
 app.get('/:file?/path', (req, res) => {
     (list.path(req.params.file).then( (a) => {
         res.json({ 
