@@ -2,18 +2,13 @@ const get = require('./http');
 const place = require('./place');
 const grid = document.getElementById('cardGrid')
 const main = document.getElementById('main')
+const menu = document.getElementById('menu');
 
 document.getElementById('arrowNext').addEventListener('click', () => {
     menuContext.page = 2;
     document.getElementById('0').classList = "";
-    document.getElementById('1').classList = "selected";
-    while(grid.childNodes.length){
-        grid.childNodes.forEach(child => {
-            grid.removeChild(child);
-        })
-    }
-
-    
+    document.getElementById('1').classList = "selected"
+    removeImages();
     showPlaces();
 });
 
@@ -21,13 +16,9 @@ document.getElementById('arrowBack').addEventListener('click', () => {
     menuContext.page = 0;
     document.getElementById('0').classList = "selected";
     document.getElementById('1').classList = "";
-    
-    while(grid.childNodes.length){
-        grid.childNodes.forEach(child => {
-            grid.removeChild(child);
-        })
-    }
 
+    
+    removeImages();
     showPlaces();
 })
 
@@ -35,10 +26,26 @@ const menuContext = {
     scenes: [],
     scenes2: [],
     page: 0,
+    menu: true,
+}
+
+function showMenu() {
+    const i = main.childElementCount
+    
+    if(menuContext.menu){
+        while(main.childElementCount === i)
+            main.removeChild(menu);
+        menuContext.menu = !menuContext.menu;
+    } else{
+        menuContext.menu = !menuContext.menu;
+        main.appendChild(menu);
+        showPlaces();
+    } 
 }
 
 async function getScenes(){ 
     return await get.scenes().then(data => {
+        removeImages();
         menuContext.scenes = [];
         menuContext.scenes2 = [];
         return data
@@ -63,7 +70,8 @@ async function constructPlace(){
     })
 }
 
-function showPlaces(){
+function showPlaces(){    
+    if(menuContext.menu)
     constructPlace().then(a => {
 
         if(menuContext.page === 0){
@@ -104,7 +112,16 @@ function showPlaces(){
 
 
 module.exports = { 
-    showPlaces
+    showPlaces,
+    showMenu
+}
+
+function removeImages() {
+    while(grid.childNodes.length){
+        grid.childNodes.forEach(child => {
+            grid.removeChild(child);
+        })
+    }
 }
 
 

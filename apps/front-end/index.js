@@ -7,3 +7,9 @@ back.getBackgroundImage();
 obj.createForms();
 
 map.showPlaces();
+map.showMenu();
+
+document.getElementById('divMap').addEventListener('click', () => {
+    map.showMenu();
+})
+

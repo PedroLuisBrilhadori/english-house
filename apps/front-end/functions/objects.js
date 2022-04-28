@@ -8,6 +8,9 @@ async function getObjects() {
         scene: place.getScene(),
     };
 
+    if(current.place == 'main')
+        return;
+
     return await get.objects(current.place, current.scene).then(objects => {
         place.clearObjects();
 
