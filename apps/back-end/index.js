@@ -52,7 +52,7 @@ app.get('/:place/scenes', (req, res) => {
 app.get('/scenes', (req, res) => {
     (list.allscenes().then( (a) => {
         res.json({ 
-            places: a
+            scenes: a
         });
     })).catch(err => {
         res.send(err)
