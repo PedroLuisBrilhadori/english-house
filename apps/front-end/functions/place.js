@@ -1,9 +1,10 @@
 let place = {
-    name: "bathroom",
-    scene: "bathroom-complete",
+    name: "main",
+    scene: "door",
     objects: [
 
     ],
+    scenes: [],
 }
 function setPlace(name){
     place.name = name;
@@ -29,8 +30,10 @@ function pushObject(object){
     place.objects.push(object);
 }
 
-function clearObjects(){
+async function clearObjects(){
     place.objects = [];
+    const forms = document.getElementById('forms');
+    forms.textContent = '';
 }
 
 function getObjects(){
