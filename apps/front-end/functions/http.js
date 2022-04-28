@@ -1,4 +1,5 @@
 const url = 'https://my-dream-house-fatec.herokuapp.com';
+
 const headers = {
     'Content-Type': 'application/json',
 }
@@ -25,8 +26,8 @@ async function search(param) {
     .catch(error => console.error(error));
 }
 
-async function objects(place, scene){
-    const objUrl = scene ? `${place}/${scene}/objects` : `${place}/objects`;
+async function objects(place, scene = ''){
+    const objUrl = scene !== '' ? `${place}/${scene}/objects` : `${place}/objects`;
     return await fetch(`${url}/${objUrl}`, {
         headers: headers
     })
@@ -37,10 +38,24 @@ async function objects(place, scene){
     .catch(error => console.error(error));
 }
 
+async function scenes() {
+    const sceneUrl = `scenes`;
+
+    return await fetch(`${url}/${sceneUrl}`, {
+        headers: headers
+    })
+    .then(response => response.json())
+    .then(data => {
+        return data.scenes;
+    })
+    .catch(error => console.error(error));
+}
+
 
 module.exports = {
     url,
     places,
     search,
     objects,
+    scenes,
 }

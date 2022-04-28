@@ -113,6 +113,8 @@ section {
 
 
 #menu {
+    position: absolute;
+    z-index: 100;
     display: grid;
     justify-items: center;
     padding: 50px 0 50px 0;

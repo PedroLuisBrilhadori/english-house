@@ -76,13 +76,13 @@ async function scenes(place) {
 }
 
 async function allscenes(){
-    let scenes = await listarArquivosDoDiretorio(`${__dirname}/assets/places/`);
+    let scenes = await listarArquivosDoDiretorio(`${__dirname}/assets/places`);
     let aux = [];
     let index = 0;
     
 
     scenes.forEach((scene) => { 
-        let noDirname = String(scene).replace(`${__dirname}/assets/places//`, '');
+        let noDirname = String(scene).replace(`${__dirname}`);
         let stringAux = '';
 
         for(let i = noDirname.indexOf('/') + 1; i < noDirname.length; i++){
@@ -91,7 +91,7 @@ async function allscenes(){
 
         noDirname = stringAux;
         
-        aux[index] = noDirname.replace('.jpg', '');
+        aux[index] = noDirname;
         index++;
 
     });
