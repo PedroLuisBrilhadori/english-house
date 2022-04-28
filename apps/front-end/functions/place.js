@@ -1,7 +1,7 @@
 let place = {
     name: "bathroom",
     scene: "bathroom-complete",
-    objecs: [
+    objects: [
 
     ],
 }
@@ -22,11 +22,19 @@ function getScene(){
 }
 
 function setObjects(objects){
-    place.objecs = objects;
+    place.objects = objects;
+}
+
+function pushObject(object){
+    place.objects.push(object);
+}
+
+function clearObjects(){
+    place.objects = [];
 }
 
 function getObjects(){
-    return place.objecs;
+    return place.objects;
 }
 
 module.exports = {
@@ -36,4 +44,6 @@ module.exports = {
     getScene,
     setObjects,
     getObjects,
+    pushObject,
+    clearObjects,
 }

@@ -3,7 +3,6 @@ const headers = {
     'Content-Type': 'application/json',
 }
 
-
 async function places() {
     return await fetch(`${url}/places`, {
         headers: headers
@@ -26,9 +25,22 @@ async function search(param) {
     .catch(error => console.error(error));
 }
 
+async function objects(place, scene){
+    const objUrl = scene ? `${place}/${scene}/objects` : `${place}/objects`;
+    return await fetch(`${url}/${objUrl}`, {
+        headers: headers
+    })
+    .then(response => response.json())
+    .then(data => {
+        return data.objects;
+    })
+    .catch(error => console.error(error));
+}
+
 
 module.exports = {
+    url,
     places,
     search,
-    url
+    objects,
 }

@@ -3,20 +3,30 @@
 @tailwind utilities;
 
 body {
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background-color: cyan;
+    background-color: #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    /* display: grid;
+    place-content: center; */
+}
+
+
+.flexButton {
     display: grid;
-    place-content: center;
+    place-items: center;
 }
 
 section {
-    display: block;
+    position: relative;
     width: 1500px;
     height: 1112px;
-    padding: 30px 30px 0 30px;
     background-image: url('https://my-dream-house-fatec.herokuapp.com/assets/places/main/door.jpg');
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
 }
 
 #divPresentation {
@@ -31,41 +41,186 @@ section {
 
 #divPresentation h1 {
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 40px;
     font-weight: bold;
 }
 
 #divSearch {
-    background-color: #182625;
+    background-color: #429FFD;
     border-radius: 50%;
     bottom: 0px;
     margin-left: 20px;
-    height: 100px;
-    width: 100px;
+    height: 60px;
+    width: 60px;
     text-align: -webkit-center;
 }
 
 #divSearch img {
     color: white;
-    height: 50px;
-    width: 50px;
-    margin-top: 20px;
+    height: 30px;
+    width: 30px;
 }
 
 #divMap {
-    background-color: #182625;
+    margin-left: 30px;
+    background-color: #429FFD;
     border-radius: 50%;
     margin-right: 20px;
-    height: 100px;
-    width: 100px;
+    height: 60px;
+    width: 60px;
     text-align: -webkit-center;
 }
 
 #divMap img {
     color: white;
-    height: 50px;
-    width: 50px;
-    margin-top: 20px;
+    height: 30px;
+    width: 30px;
 }
 
+
+.alignDivs h1 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.alignDivs, .alignDivsFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alignDivs {
+    width: 100%;
+    padding: 15px 200px;
+    background-color: black;
+}
+
+
+
+
+section {
+    /* display: grid;
+    place-items: center; */
+    width: 1500px;
+    height: 1112px;
+    padding: 20px 30px 0 30px;
+    background-image: url('https://my-dream-house-fatec.herokuapp.com/assets/places/main/door.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+
+#menu {
+    display: grid;
+    justify-items: center;
+    padding: 50px 0 50px 0;
+    width: 1144px;
+    background-color: #182625;
+    border-radius: 60px;
+    text-align: center;
+    color: #fff;
+}
+
+
+
+.cardGrid {
+    margin: 30px 0 30px 0;
+    display: grid;
+    place-content: center;
+    grid-template-columns: 185px 185px 185px 185px;
+    gap: 30px;
+}
+
+.cardPlace {
+    width: 185px;
+    height: 141px;
+    background-color: #3D5A73;
+    text-align: center;
+}
+
+.alignMenuArrows {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.returnIcon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: grid;
+    place-content: center;
+}
+
+.nextIcon img{
+    transform: scaleX(-1);
+}
+
+
+.bullets {
+    display: flex;
+    align-items: center;
+}
+
+.bullets div {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.bullets div + div {
+    margin-left: 10px;
+}
+
+.bullets .selected {
+    background-color: #3D5A73;
+}
+
+.popupObjects {
+    margin-top: -25vh;
+    display: grid;
+    place-items: center; 
+    width: 1002px;
+    padding: 50px 0;
+    background-color: #182625;
+    border-radius: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+.popupObjects h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 500px;
+    word-wrap: break-word;
+}
+
+.objectImage {
+    border-radius: 50px;
+}
+
+.objectImage img {
+    width: 100%;
+    border-radius: 50px;
+    margin-bottom: 30px;
+}
+
+.returnButton {
+    display: grid;
+    place-items: center;
+    width: 132px;
+    height: 86px;
+    border-radius: 20px;
+    background-color: #2F3D40;
+}
+
+.returnButton img {    
+    width: 37px;
+    height: 45px;
+}
