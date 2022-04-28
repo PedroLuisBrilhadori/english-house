@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode=production",
     "watch": "webpack --mode=development --watch",
     "tail": "npx tailwind -i ./apps/front-end/main.css -o ./dist/output.css --watch"
   },
@@ -25,6 +26,6 @@
     "postcss-loader": "^6.2.1"
   },
   "engines": {
-    "node": "16.x"
+    "node": "14.x"
   }
 }
