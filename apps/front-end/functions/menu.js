@@ -59,6 +59,7 @@ async function constructPlace(){
             const current = {
                 name: getSceneName(scene),
                 path: scene,
+                place: getPlaceName(scene),
             }
 
             if(i <= 8)
@@ -73,43 +74,37 @@ async function constructPlace(){
 function showPlaces(){    
     if(menuContext.menu)
     constructPlace().then(a => {
-
         if(menuContext.page === 0){
             menuContext.scenes.forEach(s => {
-                let scene = document.createElement('div');
-            
-                let name = document.createElement('p');
-                name.innerText = `${s.name}`;
-    
-                scene.appendChild(name);
-    
-                scene.id = `$${s.name}`;
-                scene.classList = 'cardPlace';
-                scene.style.backgroundImage = `url(${get.url}/${s.path})`;
-                scene.style.backgroundSize = 'cover';
-    
-                grid.appendChild(scene);
+                grid.appendChild(createScene(s));
             })        
         } else {
             menuContext.scenes2.forEach(s => {
-                let scene = document.createElement('div');
-            
-                let name = document.createElement('p');
-                name.innerText = `${s.name}`;
-    
-                scene.appendChild(name);
-    
-                scene.id = `$${s.name}`;
-                scene.classList = 'cardPlace';
-                scene.style.backgroundImage = `url(${get.url}/${s.path})`;
-                scene.style.backgroundSize = 'cover';
-    
-                grid.appendChild(scene);
+                grid.appendChild(createScene(s));
             })  
         }
     })
 }
 
+function createScene(s) {
+    let scene = document.createElement('div');
+            
+    let name = document.createElement('p');
+    name.innerText = `${s.name}`;
+
+    scene.appendChild(name);
+
+    scene.id = `$${s.name}`;
+    scene.classList = 'cardPlace';
+    scene.style.backgroundImage = `url(${get.url}/${s.path})`;
+    scene.style.backgroundSize = 'cover';
+
+    scene.addEventListener('click', () => {
+        console.log(s.name);
+    })
+
+    return scene;
+}
 
 module.exports = { 
     showPlaces,
@@ -139,4 +134,17 @@ function getSceneName(obj){
     }
 
     return name.split('').reverse().join('');
+}
+
+function getPlaceName(obj){    
+    let object = String(obj);
+    object = object.replace('assets/places/', '');
+    
+    let name = '';
+
+    for(let i = 0; object[i] !== '/'; i++){
+        name += object[i];
+    }
+
+    return name;
 }
