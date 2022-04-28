@@ -27,8 +27,8 @@ async function search(param) {
     .catch(error => console.error(error));
 }
 
-async function objects(place, scene){
-    const objUrl = scene ? `${place}/${scene}/objects` : `${place}/objects`;
+async function objects(place, scene = ''){
+    const objUrl = scene !== '' ? `${place}/${scene}/objects` : `${place}/objects`;
     return await fetch(`${url}/${objUrl}`, {
         headers: headers
     })

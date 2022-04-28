@@ -2,7 +2,9 @@ const place = require('./place');
 const get = require('./http');
 const main = document.getElementById('main');
 
-function getBackgroundImage(){
+const obj = require('./objects');
+
+function getBackgroundImage(){    
     let current = {
         place: place.getPlace(),
         scene: place.getScene()
@@ -11,7 +13,9 @@ function getBackgroundImage(){
     
     get.search(sceneUrl).then(data => {
         main.style.backgroundImage = `url(${get.url}${data})`;
-    })
+    });
+
+    obj.createForms();
 }
 
 module.exports = {

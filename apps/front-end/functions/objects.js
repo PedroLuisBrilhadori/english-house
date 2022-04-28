@@ -1,6 +1,6 @@
 const get = require('./http');
 const place = require('./place');
-const main = document.getElementById('main');
+const forms = document.getElementById('forms');
 
 async function getObjects() {
     let current = {
@@ -12,8 +12,6 @@ async function getObjects() {
         return;
 
     return await get.objects(current.place, current.scene).then(objects => {
-        place.clearObjects();
-
         objects.forEach(object => {
             place.pushObject({
                 name: getObjectName(object),
@@ -31,8 +29,6 @@ function createForms() {
             objects: place.getObjects()
         };
 
-        console.log(current.objects)
-
         current.objects.forEach(object => {    
             let form = document.createElement('div');
     
@@ -46,7 +42,7 @@ function createForms() {
             
             form.style.border = 'solid black 4px';
     
-            main.appendChild(form);
+            forms.appendChild(form);
         });
     });
 }

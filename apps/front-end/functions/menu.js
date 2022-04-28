@@ -4,6 +4,8 @@ const grid = document.getElementById('cardGrid')
 const main = document.getElementById('main')
 const menu = document.getElementById('menu');
 
+const back = require('./background');
+
 document.getElementById('arrowNext').addEventListener('click', () => {
     menuContext.page = 2;
     document.getElementById('0').classList = "";
@@ -100,7 +102,11 @@ function createScene(s) {
     scene.style.backgroundSize = 'cover';
 
     scene.addEventListener('click', () => {
-        console.log(s.name);
+        place.clearObjects();
+        place.setPlace(s.place);
+        place.setScene(s.name);
+        back.getBackgroundImage();
+        showMenu();
     })
 
     return scene;
