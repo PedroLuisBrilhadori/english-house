@@ -19,7 +19,9 @@ app.get('/:place/:scene?/objects', (req, res) => {
         res.json({ 
             objects: a
         });
-    }));
+    })).catch(err => {
+        res.send(err)
+    });
 });
 
 app.get('/places', (req, res) => {
@@ -27,7 +29,9 @@ app.get('/places', (req, res) => {
         res.json({ 
             places: a
         });
-    }));
+    })).catch(err => {
+        res.send(err)
+    })
 });
 
 app.get('/:place/scenes', (req, res) => {
@@ -40,7 +44,9 @@ app.get('/:place/scenes', (req, res) => {
         res.json({ 
             scenes: a
         });
-    }));
+    })).catch(err => {
+        res.send(err)
+    });
 });
 
 app.get('/:file?/path', (req, res) => {
@@ -48,7 +54,9 @@ app.get('/:file?/path', (req, res) => {
         res.json({ 
             files: a
         });
-    }));
+    })).catch(err => {
+        res.send(err)
+    });
 });
 
 app.listen(port, () => {
