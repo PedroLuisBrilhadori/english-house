@@ -108,6 +108,9 @@ section {
     background-image: url('https://my-dream-house-fatec.herokuapp.com/assets/places/main/door.jpg');
     background-repeat: no-repeat;
     background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -184,8 +187,8 @@ section {
 }
 
 .popupObjects {
-    margin-top: -25vh;
-    display: grid;
+    display: none;
+    position: absolute;
     place-items: center; 
     width: 1002px;
     padding: 50px 0;

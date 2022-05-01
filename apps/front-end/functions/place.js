@@ -1,6 +1,6 @@
 let place = {
-    name: "main",
-    scene: "door",
+    name: "bedroom",
+    scene: "bedroom-bed",
     objects: [
 
     ],

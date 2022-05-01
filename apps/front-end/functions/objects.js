@@ -39,8 +39,40 @@ function createForms() {
             form.style.top = `${object.cord.y}px`;
             
             form.style.position = 'absolute';
-            
             form.style.border = 'solid black 4px';
+
+            form.addEventListener('click', showPopup)
+
+            let testebotao = document.querySelector(".returnButton");
+
+            let popupObjects = document.querySelector(".popupObjects");
+            testebotao.addEventListener('click', hidePopup)
+
+            function hidePopup() {
+                popupObjects.style.display = "none";
+            }
+
+            function showPopup() {
+                let textObject = document.querySelector(".textObject");
+                let nameObject = document.querySelector(".nameObject");
+                let root = "https://my-dream-house-fatec.herokuapp.com" + object.path;
+                let objectImage = document.querySelector(".popupImage");
+                let finalText = "";
+
+                textObject.innerHTML = "teste";
+                if(object.name.slice(-1) == 's') {
+                    finalText += "There are ";
+                } else {
+                    finalText += "There is a ";
+                }
+
+                objectImage.setAttribute("src", root);
+                
+                textObject.innerHTML = finalText + object.name;
+
+                popupObjects.style.display = "grid";
+
+            }
     
             forms.appendChild(form);
         });
