@@ -141,8 +141,19 @@ section {
 .cardPlace {
     width: 185px;
     height: 141px;
+    border-radius: 5px;
     background-color: #3D5A73;
-    text-align: center;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: flex-end;
+}
+
+.cardPlace p {
+    width: 100%;
+    position: relative;
+    top: 0.6px;
+    border-radius: 0 0 5px 5px;
+    background-color: rgba(0, 0, 0, .9);
 }
 
 .alignMenuArrows {
