@@ -11,6 +11,12 @@ async function getObjects() {
     if(current.place == 'main')
         return;
 
+    const texts = await get.texts(current.scene).then(texts => {
+        return texts[current.scene].objects
+    });
+
+    place.setTexts(texts);
+
     return await get.objects(current.place, current.scene).then(objects => {
         objects.forEach(object => {
             place.pushObject({
@@ -18,6 +24,7 @@ async function getObjects() {
                 cord: getCordObject(object),
                 path: getObjectPath(object),
                 form: getTypeObject(object),
+                text: getTextObject(object),
             });
         })
     })
@@ -41,43 +48,46 @@ function createForms() {
             form.style.position = 'absolute';
             form.style.border = 'solid black 4px';
 
-            form.addEventListener('click', showPopup)
+            form.addEventListener('click', () => {
+                showPopup(object);
+            })
 
-            let testebotao = document.querySelector(".returnButton");
-
-            let popupObjects = document.querySelector(".popupObjects");
-            testebotao.addEventListener('click', hidePopup)
-
-            function hidePopup() {
-                popupObjects.style.display = "none";
-            }
-
-            function showPopup() {
-                let textObject = document.querySelector(".textObject");
-                let nameObject = document.querySelector(".nameObject");
-                let root = "https://my-dream-house-fatec.herokuapp.com" + object.path;
-                let objectImage = document.querySelector(".popupImage");
-                let finalText = "";
-
-                textObject.innerHTML = "teste";
-                if(object.name.slice(-1) == 's') {
-                    finalText += "There are ";
-                } else {
-                    finalText += "There is a ";
-                }
-
-                objectImage.setAttribute("src", root);
-                
-                textObject.innerHTML = finalText + object.name;
-
-                popupObjects.style.display = "grid";
-
-            }
-    
             forms.appendChild(form);
         });
     });
 }
+
+function showPopup(object) {
+    const menu = document.getElementById('popupObjects');
+
+    const title = `
+        <h1 class="textObject"> 
+            <span class="nameObject">${object.text}</span>
+        </h1>
+    `;
+
+    const image = `
+        <div class="objectImage">
+            <img class="popupImage" src="${get.url}${object.path}" alt="">
+        </div>
+    `;
+
+    const returnButton = `
+        <div id="popUpReturnButton" class="returnButton">
+            <img src="./assets/icons/return-icon-white.svg"> </img> 
+        </div>
+    `;
+
+    menu.innerHTML = `${title} \n ${image} \n ${returnButton}`;
+
+    menu.style.display = 'grid';
+
+    document.getElementById('popUpReturnButton').addEventListener('click', () => {
+        menu.style.display = 'none';
+    });
+}
+
+
 
 module.exports = {
     getObjects,
@@ -146,4 +156,12 @@ function getTypeObject(obj){
     }
 
     return 'square';
+}
+
+function getTextObject(obj) {
+    let name = getObjectName(obj);
+
+    const texts = place.getTexts();
+
+    return texts.filter(text => { return text.name === name })[0].text
 }

@@ -35,6 +35,9 @@
 
             {
                 "name": "shower", "text": "There is a shower."
+            }, 
+            {
+                "name": "faucet-bathroom", "text": "There is a faucet bathroom"
             }
         ]
     }

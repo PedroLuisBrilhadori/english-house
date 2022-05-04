@@ -1,0 +1,21 @@
+{
+    "bedroom-closet": {
+        "objects": [
+            {
+                "name": "cloathes&hangers", "text": "There are a cloathes and hangers."
+            },
+
+            {
+                "name": "shoerack", "text": "There is a shoerack."
+            },
+
+            {
+                "name": "cabinets", "text": "There is a cabinets."
+            },
+
+            {
+                "name": "books", "text": "There are a books."
+            } 
+        ]
+    }
+}

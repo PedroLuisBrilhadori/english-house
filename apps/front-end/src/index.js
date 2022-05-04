@@ -11,4 +11,3 @@ map.showMenu();
 document.getElementById('divMap').addEventListener('click', () => {
     map.showMenu();
 })
-

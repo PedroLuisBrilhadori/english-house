@@ -6,7 +6,7 @@
             },
 
             {
-                "name": "trampoline", "text": "There are chairs."
+                "name": "chairs", "text": "There are chairs."
             },
 
             {
@@ -14,7 +14,7 @@
             },
 
             {
-                "name": "cushion", "text": "There are armchairs."
+                "name": "cushion", "text": "There are cushion."
             },
 
             {

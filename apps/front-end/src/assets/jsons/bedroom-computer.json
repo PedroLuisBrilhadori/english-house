@@ -1,0 +1,37 @@
+{
+    "bedroom-computer": {
+        "objects": [
+            {
+                "name": "monitors", "text": "There are a two monitors."
+            },
+
+            {
+                "name": "soundtable", "text": "There is a soundtable."
+            },
+
+            {
+                "name": "keyboard", "text": "There is a gamer keyboard."
+            },
+
+            {
+                "name": "soundbox", "text": "There is a soundbox."
+            },
+
+            {
+                "name": "jackdaniels", "text": "There is a Jack Daniels."
+            },
+
+            {
+                "name": "mouse", "text": "There is a mouse."
+            },
+
+            {
+                "name": "computer", "text": "There is a computer."
+            },
+
+            {
+                "name": "gamer-chair", "text": "There is a gamer chair."
+            }
+        ]
+    }
+}

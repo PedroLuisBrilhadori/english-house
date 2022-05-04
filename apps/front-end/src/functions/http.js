@@ -1,5 +1,6 @@
-const url = 'https://my-dream-house-fatec.herokuapp.com';
-// const url = 'https://localhost:3000';
+// const url = 'https://my-dream-house-fatec.herokuapp.com';
+const url = 'http://localhost:3000';
+const place = require('./place');
 
 const headers = {
     'Content-Type': 'application/json',
@@ -52,6 +53,17 @@ async function scenes() {
     .catch(error => console.error(error));
 }
 
+async function texts(scene) {
+    const sceneUrl = `./assets/jsons/${scene}.json`;
+
+    return await fetch(`${sceneUrl}`)
+    .then(response => response.json())
+    .then(data => {
+        return data;
+    })
+    .catch(error => console.error(error));
+}
+
 
 module.exports = {
     url,
@@ -59,4 +71,5 @@ module.exports = {
     search,
     objects,
     scenes,
+    texts,
 }
