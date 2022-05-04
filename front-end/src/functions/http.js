@@ -1,5 +1,5 @@
-// const url = 'https://my-dream-house-fatec.herokuapp.com';
-const url = 'http://localhost:3000';
+const url = 'https://my-dream-house-fatec.herokuapp.com';
+// const url = 'http://localhost:3000';
 
 const place = require('./place');
 
