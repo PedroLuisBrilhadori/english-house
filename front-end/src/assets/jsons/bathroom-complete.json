@@ -10,15 +10,11 @@
             },
 
             {
-                "name": "dresser", "text": "There is a drawer."
+                "name": "dresser", "text": "There is a dresser."
             },
 
             {
                 "name": "toothbrush-toothpaste-floss", "text": "There is a toothbrush, toothpaste and floss."
-            },
-
-            {
-                "name": "bathroom-sink", "text": "There is a bathroom sink."
             },
 
             {

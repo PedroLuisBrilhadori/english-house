@@ -2,7 +2,7 @@
     "laundry-iron": {
         "objects": [
             {
-                "name": "iron", "text": "There is a iron."
+                "name": "iron", "text": "There is an iron."
             }
         ]
     }

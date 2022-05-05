@@ -2,7 +2,7 @@
     "bedroom-closet": {
         "objects": [
             {
-                "name": "cloathes&hangers", "text": "There are a cloathes and hangers."
+                "name": "cloathes&hangers", "text": "There are cloathes and hangers."
             },
 
             {
@@ -10,11 +10,11 @@
             },
 
             {
-                "name": "cabinets", "text": "There is a cabinets."
+                "name": "cabinets", "text": "There are cabinets."
             },
 
             {
-                "name": "books", "text": "There are a books."
+                "name": "books", "text": "There are books."
             } 
         ]
     }

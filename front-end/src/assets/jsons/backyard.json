@@ -18,11 +18,11 @@
             },
 
             {
-                "name": "outdoor-table", "text": "There is a outdoor table."
+                "name": "outdoor-table", "text": "There is an outdoor table."
             },
 
             {
-                "name": "window", "text": "There is an window."
+                "name": "window", "text": "There is a window."
             }
         ]
     }
