@@ -7,13 +7,13 @@ const main = document.getElementById("main");
 
 const menuContext = {
     scenes: [],
-    page: 1,
+    page: 2,
     pageSize: 8,
     menu: true,
 };
 
 document.getElementById("arrowNext").addEventListener("click", () => {
-    menuContext.page = 2;
+    menuContext.page = 1;
     document.getElementById("0").classList = "";
     document.getElementById("1").classList = "selected";
 
@@ -22,7 +22,7 @@ document.getElementById("arrowNext").addEventListener("click", () => {
 });
 
 document.getElementById("arrowBack").addEventListener("click", () => {
-    menuContext.page = 1;
+    menuContext.page = 2;
     document.getElementById("0").classList = "selected";
     document.getElementById("1").classList = "";
 
