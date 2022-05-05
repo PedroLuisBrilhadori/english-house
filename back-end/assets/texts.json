@@ -10,7 +10,7 @@
             },
 
             {
-                "name": "poolside-lounger", "text": "There are poolside lounger."
+                "name": "poolside-loungers", "text": "There are poolside loungers."
             },
 
             {
@@ -196,7 +196,7 @@
                 },
 
                 {
-                    "name": "computer", "text": "There are a computer."
+                    "name": "computer", "text": "There is a computer."
                 },
 
                 {

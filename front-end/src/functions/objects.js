@@ -97,6 +97,9 @@ function createForms() {
 
         current.objects.forEach((object) => {
             let form = document.createElement("div");
+            let circle = document.createElement("div");
+
+            circle.className = "styleSelection";
 
             form.id = object.name;
             form.style.width = `${object.cord.w}px`;
@@ -105,13 +108,16 @@ function createForms() {
             form.style.top = `${object.cord.y}px`;
 
             form.style.position = "absolute";
-            form.style.border = "solid black 4px";
+
+            form.style.display = "grid";
+            form.style.placeItems = "center";
 
             form.addEventListener("click", () => {
                 object.func ? showMenu() : showPopup(object);
             });
 
             forms.appendChild(form);
+            form.appendChild(circle);
         });
     });
 }
