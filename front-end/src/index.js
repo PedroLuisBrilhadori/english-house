@@ -1,13 +1,9 @@
 import "./main.css";
-const map = require('./functions/menu');
-const back = require('./functions/background');
-const obj = require('./functions/objects');
+const obj = require("./functions/objects");
 
-back.getBackgroundImage();
+obj.showMenu();
+obj.getBackgroundImage();
 
-map.showPlaces();
-map.showMenu();
-
-document.getElementById('divMap').addEventListener('click', () => {
-    map.showMenu();
-})
+document.getElementById("home").addEventListener("click", () => {
+    document.location.reload();
+});

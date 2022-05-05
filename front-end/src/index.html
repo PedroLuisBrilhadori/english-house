@@ -1,46 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Dream House</title>
-    
-    <link rel="stylesheet" type="text/css" href="./output.css"/>
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Dream House</title>
 
-<body>
-    <div class="alignDivs">
-        <h1>Welcome to my dream house!</h1>
-        
-        <div class="alignDivsFlex">
-            <div id="divMap" class="flexButton"><img src="./assets/icons/map-icon.svg"></div>
-        </div>
-    </div>
+        <link rel="stylesheet" type="text/css" href="./output.css" />
+    </head>
 
-    <section id="main">
-        <div id="menu" >
-            <h1>House places</h1>
+    <body>
+        <div class="alignDivs">
+            <h1 id="home">Welcome to my dream house!</h1>
 
-            <div id="cardGrid" class="cardGrid"></div>
-
-            <div class="alignMenuArrows">
-                <div id="arrowBack" class="returnIcon"><img src="./assets/icons/return-icon.svg" alt=""></div>
-                <div class="bullets">
-                    <div id="1" class="selected"></div>
-                    <div id="0"></div>             
+            <div class="alignDivsFlex">
+                <div id="divMap" class="flexButton">
+                    <img src="./assets/icons/map-icon.svg" />
                 </div>
-                <div id="arrowNext" class="returnIcon nextIcon"><img src="./assets/icons/return-icon.svg" alt=""></div>
             </div>
         </div>
 
-        <div id="forms"></div>
+        <section id="main">
+            <div id="menu">
+                <h1>House places</h1>
 
-    <div id="popupObjects" class="popupObjects"></div>
+                <div id="cardGrid" class="cardGrid"></div>
 
-    <div class="popupObjects">
-    </div>
-    </section>
-    <script src="./_bundle.js"></script>
-</body>
+                <div class="alignMenuArrows">
+                    <div id="arrowBack" class="returnIcon">
+                        <img src="./assets/icons/return-icon.svg" alt="" />
+                    </div>
+                    <div class="bullets">
+                        <div id="1" class="selected"></div>
+                        <div id="0"></div>
+                    </div>
+                    <div id="arrowNext" class="returnIcon nextIcon">
+                        <img src="./assets/icons/return-icon.svg" alt="" />
+                    </div>
+                </div>
+            </div>
+
+            <div id="forms"></div>
+
+            <div id="popupObjects" class="popupObjects"></div>
+
+            <div class="popupObjects"></div>
+        </section>
+        <script src="./_bundle.js"></script>
+    </body>
 </html>

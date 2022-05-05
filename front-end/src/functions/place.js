@@ -1,73 +1,72 @@
 let place = {
-    name: "bedroom",
-    scene: "bedroom-bed",
-    objects: [
+  name: "main",
+  scene: "door",
+  objects: [],
+  scenes: [],
+  texts: {},
+  loading: false,
+};
 
-    ],
-    scenes: [],
-    texts: {},
-    loading: false,
-}
-function setPlace(name){
-    place.name = name;
-}
-
-function getPlace(){
-    return place.name;
+function setPlace(name) {
+  place.name = name;
 }
 
-function setScene(scene){
-    place.scene = scene;
+function getPlace() {
+  return place.name;
 }
 
-function getScene(){
-    return place.scene;
+function setScene(scene) {
+  place.scene = scene;
 }
 
-function setObjects(objects){
-    place.objects = objects;
+function getScene() {
+  return place.scene;
 }
 
-function pushObject(object){
-    place.objects.push(object);
+function setObjects(objects) {
+  place.objects = objects;
 }
 
-async function clearObjects(){
-    place.objects = [];
-    const forms = document.getElementById('forms');
-    forms.textContent = '';
+function pushObject(object) {
+  place.objects.push(object);
 }
 
-function getObjects(){
-    return place.objects;
+async function clearObjects() {
+  place.objects = [];
+  const forms = document.getElementById("forms");
+  forms.textContent = "";
+}
+
+function getObjects() {
+  return place.objects;
 }
 
 function setTexts(texts) {
-    place.texts = texts;
+  place.texts = texts;
 }
 
 function getTexts() {
-    return place.texts;
+  return place.texts;
 }
 
 function setLoading(loading) {
-    place.loading = loading;
+  place.loading = loading;
 }
 
-function isLoading(){
-    return place.loading;
+function isLoading() {
+  return place.loading;
 }
 
 module.exports = {
-    setPlace,
-    getPlace,
-    setScene,
-    getScene,
-    setObjects,
-    getObjects,
-    pushObject,
-    clearObjects,
-    setTexts,
-    getTexts,
-    setLoading,
-}
+  setPlace,
+  getPlace,
+  setScene,
+  getScene,
+  setObjects,
+  getObjects,
+  pushObject,
+  clearObjects,
+  setTexts,
+  getTexts,
+  setLoading,
+};
