@@ -1,0 +1,13 @@
+{
+    "laundry-lines": {
+        "objects": [
+            {
+                "name": "window", "text": "There is a window."
+            },
+
+            {
+                "name": "clothesline", "text": "There is a clothesline."
+            }
+        ]
+    }
+}

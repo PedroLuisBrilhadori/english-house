@@ -1,0 +1,31 @@
+{
+  "name": "my-webpack-project",
+  "version": "1.0.0",
+  "description": "My webpack project",
+  "main": "apps/back-end/index.js",
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx webpack --mode=production",
+    "watch": "npx webpack --mode=development --watch",
+    "tail": "npx tailwind -i ./apps/front-end/main.css -o ./dist/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^10.2.4",
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "postcss": "^8.4.12",
+    "postcss-loader": "^6.2.1",
+    "tailwindcss": "^3.0.24"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "dependencies": {
+    "webpack-cli": "^4.9.2"
+  }
+}

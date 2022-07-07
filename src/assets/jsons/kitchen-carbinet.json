@@ -1,0 +1,25 @@
+{
+    "kitchen-carbinet": {
+        "objects": [
+            {
+                "name": "plates", "text": "There are plates."
+            },
+
+            {
+                "name": "jars", "text": "There are jars."
+            },
+
+            {
+                "name": "bowls", "text": "There are bowls."
+            },
+
+            {
+                "name": "cutlery", "text": "There is a cutlery."
+            },
+
+            {
+                "name": "pears", "text": "There are pears."
+            }
+        ]
+    }
+}

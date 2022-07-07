@@ -1,0 +1,9 @@
+{
+    "laundry-iron": {
+        "objects": [
+            {
+                "name": "iron", "text": "There is an iron."
+            }
+        ]
+    }
+}

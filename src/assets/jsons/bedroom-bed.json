@@ -1,0 +1,35 @@
+{
+    "bedroom-bed": {
+        "objects": [
+            {
+                "name": "pots",
+                "text": "There are pots."
+            },
+
+            {
+                "name": "night-table",
+                "text": "There is a night table."
+            },
+
+            {
+                "name": "lamp",
+                "text": "There is a lamp."
+            },
+
+            {
+                "name": "pillows",
+                "text": "There are pillows."
+            },
+
+            {
+                "name": "bed",
+                "text": "There is a bed."
+            },
+
+            {
+                "name": "blanket",
+                "text": "There is a blanket."
+            }
+        ]
+    }
+}

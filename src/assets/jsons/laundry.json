@@ -1,0 +1,50 @@
+{
+    "laundry": {
+        "objects": [
+            {
+                "name": "washing-machines",
+                "text": "There are washing machines."
+            },
+
+            {
+                "name": "cleaning-product-carbinets",
+                "text": "There are cleaning product carbinets."
+            },
+
+            {
+                "name": "towels",
+                "text": "There are towels."
+            },
+
+            {
+                "name": "fabric-softner",
+                "text": "There is a fabric softner."
+            },
+
+            {
+                "name": "laundry-soap-powder",
+                "text": "There is a laundry soap powder."
+            },
+
+            {
+                "name": "soaps",
+                "text": "There are soaps."
+            },
+
+            {
+                "name": "clothes-basket",
+                "text": "There is a clothes basket."
+            },
+
+            {
+                "name": "clothes&hangers",
+                "text": "There are clothes and hangers."
+            },
+
+            {
+                "name": "vaccum-cleaner",
+                "text": "There is a vaccum cleaner."
+            }
+        ]
+    }
+}
